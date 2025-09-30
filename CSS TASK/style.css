@@ -1,0 +1,33 @@
+.upper{
+    display: flex;
+    background-color: slategrey;
+    font-size: larger;
+}
+
+.down{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.down1, .down2, .down3{
+    flex: 1;
+    max-width: 300px;
+    min-height: 200px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+.down1{
+    background-color: darkgrey;
+}
+
+.down2{
+    background-color: grey;
+}
+
+.down3{
+    background-color: dimgrey;
+}

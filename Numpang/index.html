@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box {
+            width: 45%;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+<head>
+    <body>
+        <div class=""container>
+            <div class="box" style="background-color:#f0f0f0;">
+                <p>Bagian 1</p>
+                <form id="myform" onsubmit="return submitForm(event)">
+                    <label for="nama">Nama:</label>
+                    <input type="text" id="nama" name="nama"><br></br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        <div class="box" style="background-color: #e0e0e0;">bagian2</div>
+        <div class="box" style="background-color: #f0f0f0;">bagian3</div>
+        <div class="box" style="background-color: #e0e0e0;">bagian4</div>
+        </div>
+        <script>
+            function submitForm(event)
+        {
+            event.preventDefault();
+            var nama = document.getElementById("nama").value;
+            alert("Nama: " + nama)
+        }
+        </script>
+    </body>
+</head>
+</html>
