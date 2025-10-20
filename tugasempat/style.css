@@ -1,0 +1,191 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: -50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid #928e85;
+  box-shadow:0px 10px 15px 0px #928e85;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, #928e85, #36454f);
+}
+
+.navbar a {
+  display: block;
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.beda {
+  font-style: oblique;
+  text-align: right;
+}
+
+.sendiri{
+    display: flex;
+    gap: 40px;
+}
+
+.upper{
+    display: flex;
+    background-color: slategrey;
+    font-size: x-large;
+    border-radius: 20px;
+    border: 10px solid darkslategrey;
+    text-align: justify;
+    margin-top: 5em;
+}
+
+.text::first-letter {
+  float: left;
+  text-transform: uppercase;
+  line-height: 0.7;
+  font-size: 2em;
+  color: lightgrey;
+  margin-top: 0.1em;
+  margin-right: 0.15em;
+}
+
+.musik-container {
+  text-align: center;
+  margin: 30px auto;
+}
+
+#tombolMusik {
+  padding: 10px 25px;
+  font-size: 18px;
+  background-color: grey;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background-color 0.3s;
+}
+
+#tombolMusik:hover {
+  background-color: #928e85;
+}
+
+.down{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+.down1, .down2, .down3{
+    flex: 1;
+    max-width: 500px;
+    min-height: 200px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+.down1{
+    background-color: darkgrey;
+    border-bottom: 20px solid black;
+    border-top: 20px solid black;
+    border-left: 20px solid black;
+}
+
+.down2{
+    background-color: grey;
+    border-bottom: 20px solid black;
+    border-top: 20px solid black;
+}
+
+.down3{
+    background-color: dimgrey;
+    border-bottom: 20px solid black;
+    border-top: 20px solid black;
+    border-right: 20px solid black;
+}
+
+.foto{
+  box-shadow:0px 20px 15px 0px #36454f;
+}
+
+.middle{
+    display: flex;
+    animation: wiggle 3s ease-in-out infinite;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+@keyframes wiggle{
+  0%, 100% {
+    transform: rotate(-3deg) translateX(40px);
+  }
+  50% {
+    transform: rotate(3deg) translateX(0px);
+  }
+}
+
+.bawah{
+  display: flex;
+  justify-content: center;
+}
+
+.bawah > div {
+  width: 250px;
+  border-radius: 20px;
+  height: 200px;
+  padding: 1em;
+  opacity: 1;
+  box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 100%);
+}
+
+.bawah > div + div{
+  margin-left: -100px;
+}
+
+.bawah > :nth-child(1) { background: slategrey; z-index: 1; }
+.bawah > :nth-child(2) { background: lightgrey; z-index: 2; }
+.bawah > :nth-child(3) { background: grey; z-index: 3; }
+
+.bawahsatu:hover {
+  animation: card 600ms ease-out;  
+}
+
+@keyframes card {
+  0%   { transform: translateY(0); }      
+  50%  { transform: translateY(-50px); }   
+  100% { transform: translateY(0); }       
+}
+
+.bawahsatu, .bawahdua, .bawahtiga {
+  transition: transform 600ms ease-in-out;  
+  position: relative;
+  z-index: 1;
+}
+
+.bawahsatu:hover,
+.bawahdua:hover,
+.bawahtiga:hover {
+  animation: card 800ms ease-out;
+  z-index: 10; 
+}
+
+@keyframes card {
+  0%   { transform: translateY(0); }      
+  50%  { transform: translateY(-50px); }   
+  100% { transform: translateY(0); }       
+}
+
+.bawahsatu, .bawahdua, .bawahtiga {
+  transition: transform 600ms ease-in-out, z-index 0s linear 600ms;
+}
+
+.bawahtiga:hover{
+  box-shadow: 0px 10px 10px 0px rgb(255 255 255/ 100%)
+}

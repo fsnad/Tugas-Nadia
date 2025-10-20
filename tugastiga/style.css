@@ -105,14 +105,11 @@
 }
 
 .bawah{
-  display: grid;
+  display: flex;
   justify-content: center;
-  grid-template-columns: repeat(3, 100px);
 }
 
-.bawah > * {
-  display: grid;
-  place-items: center;
+.bawah > div {
   width: 250px;
   border-radius: 20px;
   height: 200px;
@@ -121,75 +118,47 @@
   box-shadow: 0px 10px 10px 0px rgb(0 0 0 / 100%);
 }
 
-.bawah > :first-child {
-  background: slategrey;
-  border: 2px solid darkslategrey;
+.bawah > div + div{
+  margin-left: -100px;
+}
+
+.bawah > :nth-child(1) { background: slategrey; z-index: 1; }
+.bawah > :nth-child(2) { background: lightgrey; z-index: 2; }
+.bawah > :nth-child(3) { background: grey; z-index: 3; }
+
+.bawahsatu:hover {
+  animation: card 600ms ease-out;  
+}
+
+@keyframes card {
+  0%   { transform: translateY(0); }      
+  50%  { transform: translateY(-50px); }   
+  100% { transform: translateY(0); }       
+}
+
+.bawahsatu, .bawahdua, .bawahtiga {
+  transition: transform 600ms ease-in-out;  
+  position: relative;
   z-index: 1;
-  grid-column: 1/2;
 }
 
-.bawah :nth-child(2) {
-  background: lightgrey;
-  border: 2px solid darkgrey;
-  z-index: 1;
-  grid-column: 3/4;
+.bawahsatu:hover,
+.bawahdua:hover,
+.bawahtiga:hover {
+  animation: card 800ms ease-out;
+  z-index: 10; 
 }
 
-.bawah > :last-child {
-  background: grey;
-  border: 2px solid dimgrey;
-  z-index: 1;
-  grid-column: 4/5;
+@keyframes card {
+  0%   { transform: translateY(0); }      
+  50%  { transform: translateY(-50px); }   
+  100% { transform: translateY(0); }       
 }
 
-.bawah:hover > :first-child{
-  animation: card 1s ease-in-out;
-  z-index: 3;
+.bawahsatu, .bawahdua, .bawahtiga {
+  transition: transform 600ms ease-in-out, z-index 0s linear 600ms;
 }
 
-@keyframes card{
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-49px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}
-
-.bawah:hover > :nth-child(2){
-  animation: card 1s ease-in-out;
-}
-
-@keyframes card{
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-51px);
-    z-index: 4;
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}
-
-.bawah:hover > :last-child{
-  animation: card 1s ease-in-out;
-  box-shadow: 0px 10px 10px 0px rgb(255 255 255/ 100%);
-}
-
-@keyframes card{
-  0%{
-    transform: translateY(0);
-  }
-  50%{
-    transform: translateY(-50px);
-    z-index: 3;
-  }
-  100%{
-    transform: translateY(0px);
-  }
+.bawahtiga:hover{
+  box-shadow: 0px 10px 10px 0px rgb(255 255 255/ 100%)
 }
