@@ -68,7 +68,7 @@
   border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
 
 #tombolMusik:hover {
@@ -183,7 +183,7 @@
 }
 
 .bawahsatu, .bawahdua, .bawahtiga {
-  transition: transform 600ms ease-in-out, z-index 0s linear 600ms;
+  transition: 600ms ease-in-out, z-index 0s linear 600ms;
 }
 
 .bawahtiga:hover{
